@@ -1,0 +1,10 @@
+ Punto 2f
+
+¿Puede ver el archivo tp2_1_2.c? ¿Por qué?
+Git maneja las ramas como líneas de desarrollo independientes. Cuando creé el archivo tp2_1_2.c, lo hice específicamente en la rama Opcion_2, por lo que este archivo pertenece exclusivamente a esa rama. Al cambiar a main, Git restaura automáticamente el estado del proyecto exactamente como estaba en esa rama, que en este caso no incluye el archivo que creé en la otra rama.
+
+En VSCode vuelva al “Source Control” ¿Qué diferencias nota?
+Noto de que se abrio una rama del main, la cual es opcion 2, creada en el apartado anterior. Cabe recalcar que el commit actual se hizo en el main.
+
+En VSCode vuelva al “Source Control” vea los cambios, ¿Qué nota?
+Ahora noto que la rama opcion 2 se combino con el main, cerrando su camino.
