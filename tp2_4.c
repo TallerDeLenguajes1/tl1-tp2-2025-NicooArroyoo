@@ -20,7 +20,6 @@ int main(){
     PC pcs[cantidad];
     int velocidad, anio, cantNucleos;
     char *tipos[] = {"Intel", "AMD", "Celeron", "Athlon", "Core", "Pentium"};
-    char *tipoCpu;
     
     for(int i=0;i<cantidad;i++){
         pcs[i].velocidad = 1 +rand () % 3;
@@ -47,7 +46,7 @@ void listarPCs(PC pcs[], int n){
 }
 
 void mostrarMasVieja(PC pcs[], int n){
-  int menor = 9999, pcMenor, i;
+  int menor = 9999, pcMenor = 0, i;
 
   for(i=0;i<n;i++){
     if(pcs[i].anio < menor){
@@ -64,7 +63,7 @@ void mostrarMasVieja(PC pcs[], int n){
 }
 
 void mostrarMasVeloz(PC pcs[], int n){
-  int mayor = 0, pcVeloz, i;
+  int mayor = 0, pcVeloz = 0, i;
 
   for(i=0;i<n;i++){
     if(pcs[i].velocidad > mayor){
