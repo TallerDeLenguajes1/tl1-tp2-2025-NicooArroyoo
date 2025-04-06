@@ -9,7 +9,8 @@ struct compu {
  char *tipo_cpu; // Tipo de procesador (apuntador a cadena de caracteres)
 } typedef PC;
 
-void listarPCs(PC pcs[], int cantidad);
+void listarPCs(PC pcs[], int n);
+void mostrarMasVieja(PC pcs[], int n);
 
 int main(){
     
@@ -28,6 +29,7 @@ int main(){
     }
 
     listarPCs(pcs,cantidad);
+    mostrarMasVieja(pcs, cantidad);
 
   return 0;
 }
@@ -42,3 +44,20 @@ void listarPCs(PC pcs[], int n){
   }
 }
 
+void mostrarMasVieja(PC pcs[], int n){
+  int menor = 9999, pcMenor, i;
+
+  for(i=0;i<n;i++){
+    if(pcs[i].anio < menor){
+      pcMenor = i;
+      menor = pcs[i].anio;
+    }
+  }
+  printf("\n------ PC MAS VIEJA ------\n\n");
+  printf("---- PC %d ----\n", pcMenor+1);
+  printf("Velocidad: %d Ghz\n",pcs[pcMenor].velocidad);
+  printf("Anio de fabricacion: %d \n",pcs[pcMenor].anio);
+  printf("Cantidad de nucleos: %d \n",pcs[pcMenor].cantidad_nucleos);
+  printf("Tipo de procesador: %s \n\n",pcs[pcMenor].tipo_cpu);   
+}
+  
